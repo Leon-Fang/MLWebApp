@@ -1,0 +1,6 @@
+1. build a frontend page: bootstrap+vue
+   1.1 draw webUI
+   1.2 
+   1.3
+2. build a backend API frame: DRF
+3. ML: sklearn+python+numpy+pandas+matplotlib

@@ -49,55 +49,96 @@
         </ul>
       </nav>
    
-     <div class="container">
-       <div class="row">
-          <div class="col-sm-9 col-md-9 col-lg-9">
-            <div class="h-15">
-              <nav class="navbar navbar-expand-sm navbar-light bg-light">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
+       <div class="row m-auto">
+          <div class="col-sm-8 col-md-8 col-lg-8 mt-1 p-0">
+            <div class="h-15 bg-secondary">
+              <nav class="navbar navbar-expand-sm navbar-light">
                 <div class="collapse navbar-collapse" id="collapsibleNavId">
                   <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Link</a>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle text-warning" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Time Level</a>
+                      <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="#">5 min</a>
+                        <a class="dropdown-item" href="#">30 min</a>
+                      </div>
                     </li>
                     <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                      <a class="nav-link dropdown-toggle text-warning" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Image Type</a>
                       <div class="dropdown-menu" aria-labelledby="dropdownId">
-                        <a class="dropdown-item" href="#">Action 1</a>
-                        <a class="dropdown-item" href="#">Action 2</a>
+                        <a class="dropdown-item" href="#">柱状图</a>
+                        <a class="dropdown-item" href="#">点图</a>
                       </div>
                     </li>
                   </ul>
-                  <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                  </form>
+                  
+                <button class="btn btn-primary" type="button" >ML Page
+                </button>
+                  
                 </div>
               </nav>
-
-
-
             </div>
             <div class="h-85" >
 
+              <img src="../static/images/test.jpg" class="img-fluid" alt="logo" width="100%">
+
+
             </div>
           </div>
-         <div class="col-sm-3 col-md-3 col-lg-3">
-            <div class="h-50">
+
+         <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="h-50 mt-1 p-0">
+
+              <div class="card">
+                <div class="card-header">
+                  News
+                </div>
+                <div class="list-group">
+                  <a href="#" class="list-group-item list-group-item-action active">Active item</a>
+                  <a href="#" class="list-group-item list-group-item-action">Item</a>
+                  <a href="#" class="list-group-item list-group-item-action">Item2</a>
+                  <a href="#" class="list-group-item list-group-item-action">Item</a>
+                  <a href="#" class="list-group-item list-group-item-action">
+                    <button>button1</button>
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action disabled">Disabled item</a>
+                </div>
+                
+                <div class="card-footer text-muted">
+                  
+                  <button>button2</button>
+                  <button>button3</button>
+                </div>
+              </div>
+
+
 
             </div>
             <div class="h-50" >
 
+              <div class="card">
+                <div class="card-header">
+                  Canlendar
+                </div>
+                <div class="list-group">
+                  <a href="#" class="list-group-item list-group-item-action active">Active item</a>
+                  <a href="#" class="list-group-item list-group-item-action">Item</a>
+                  <a href="#" class="list-group-item list-group-item-action">Item2</a>
+                  <a href="#" class="list-group-item list-group-item-action">Item</a>
+                  <a href="#" class="list-group-item list-group-item-action">Item2</a>
+                  <a href="#" class="list-group-item list-group-item-action disabled">Disabled item</a>
+                </div>
+                
+                <div class="card-footer text-muted">
+                  <button>button1</button>
+                  <button>button2</button>
+                  <button>button3</button>
+                </div>
+              </div>
+
+
             </div>          
          </div>
-       </div>
+
      </div>
 
 

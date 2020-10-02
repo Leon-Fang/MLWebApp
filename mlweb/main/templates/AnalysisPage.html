@@ -189,7 +189,9 @@
                           data: {{ timestamp|safe }}                     
                         },
                         yAxis: {
-
+                          type: 'value',
+                          min: function(value) {return value.min;},
+                          max: function(value) {return value.max;}
                         },
                         dataZoom: [
                                       {   // 这个dataZoom组件，默认控制x轴。
@@ -205,28 +207,23 @@
                                   ],
                         series: [ {
                                     name: 'open',
-                                    type: 'bar',
+                                    type: 'line',
                                     data: {{ Open|safe }} 
                                   },
                                   {
                                     name: 'high',
-                                    type: 'bar',
+                                    type: 'line',
                                     data: {{ High|safe }}
                                   },
                                   {
                                     name: 'low',
-                                    type: 'bar',
+                                    type: 'line',
                                     data: {{ Low|safe }}
                                   },
                                   {
                                     name: 'close',
-                                    type: 'bar',
-                                    data: {{ Close|safe }} 
-                                  },
-                                  {
-                                    name: 'Volume',
                                     type: 'line',
-                                    data: {{ Volume|safe }} 
+                                    data: {{ Close|safe }} 
                                   }
                         ]
                       };

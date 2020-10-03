@@ -4,3 +4,7 @@
    1.3
 2. build a backend API frame: DRF
 3. ML: sklearn+python+numpy+pandas+matplotlib
+
+
+selectCalendar="select publishDate,publishTime,Country,Event,ReportPeriod,PublishData,PredictedData,PreValue,Importance,tendency from ecocalendar"
+selectNews="select articleTitle,articletime,articlecontent from fxNews"

@@ -56,9 +56,10 @@
             <div class="h-15 bg-secondary">
               <nav class="navbar navbar-expand-sm navbar-light">
                 <div class="collapse navbar-collapse" id="collapsibleNavId">
-                <button class="btn btn-primary" type="button" >ML Page
-                </button>
-                  
+                 <a href="/analysis/" target="_blank">
+                  <button class="btn btn-primary" type="button" >ML Page
+                  </button>
+                 </a>
                 </div>
               </nav>
             </div>
@@ -77,14 +78,10 @@
                   News
                 </div>
                 <div class="list-group">
-                  <a href="#" class="list-group-item list-group-item-action">Active item</a>
-                  <a href="#" class="list-group-item list-group-item-action">Item</a>
-                  <a href="#" class="list-group-item list-group-item-action">Item2</a>
-                  <a href="#" class="list-group-item list-group-item-action">Item</a>
-                  <a href="#" class="list-group-item list-group-item-action">Item</a>
-                  <a href="#" class="list-group-item list-group-item-action">Item2</a>
-                  <a href="#" class="list-group-item list-group-item-action">Item2</a>
-                  <a href="#" class="list-group-item list-group-item-action">
+                  {% for new in news %}
+                    <a href="#" class="list-group-item list-group-item-action">{{new.0}}</a>
+                  {% endfor %}
+                  <a href="/news/" target='_blank' class="list-group-item list-group-item-action">
                     <button class="btn btn-outline-light text-dark btn-block btn-sm">More...</button>
                   </a>
                 </div>
@@ -102,13 +99,9 @@
                 
                 </div>
                 <div class="list-group">
-                  <a href="#" class="list-group-item list-group-item-action">Active item</a>
-                  <a href="#" class="list-group-item list-group-item-action">Item</a>
-                  <a href="#" class="list-group-item list-group-item-action">Item2</a>
-                  <a href="#" class="list-group-item list-group-item-action">Item</a>
-                  <a href="#" class="list-group-item list-group-item-action">Item</a>
-                  <a href="#" class="list-group-item list-group-item-action">Item2</a>
-                  <a href="#" class="list-group-item list-group-item-action">Item2</a>
+                  {% for can in canlendars %}
+                    <a href="#" class="list-group-item list-group-item-action">{{can.3}}</a>
+                  {% endfor %}
                   <a href="#" class="list-group-item list-group-item-action">
                     <button class="btn btn-outline-light text-dark btn-block btn-sm">More...</button>
                   </a>

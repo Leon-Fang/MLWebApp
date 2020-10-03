@@ -10,6 +10,9 @@ def index(request):
     context['High'] = df['High'][:200].values.tolist()
     context['Low'] = df['Low'][:200].values.tolist()
     context['Close'] = df['Close'][:200].values.tolist()
-    context['Volume'] = df['Volume'][:200].div(3000).values.tolist()    
+    context['Volume'] = df['Volume'][:200].div(10000).values.tolist()    
 
     return render(request,'AnalysisPage.html', context)
+
+
+

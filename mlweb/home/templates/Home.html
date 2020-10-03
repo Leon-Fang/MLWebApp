@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>AI Home</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+  </head>
+  <body>
+
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">
+          <img src="../static/images/test.jpg" alt="Logo" style="width:40px;">
+        </a>
+
+        <!-- Links -->
+        <ul class="navbar-nav">
+        <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              Forex type
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">GBK</a>
+              <a class="dropdown-item" href="#">EUR</a>
+              <a class="dropdown-item" href="#">JAN</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">User</a>
+          </li>                
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li>
+                <form class="form-inline text-right">
+                  <input class="form-control" type="text" placeholder="Search">
+                  <button class="btn btn-primary" type="submit">Search</button>
+                </form>
+            </li>
+        </ul>
+      </nav>
+    
+    <div class="container-fluid">
+       <div class="row m-auto">
+          <div class="col-sm-8 col-md-8 col-lg-8 mt-1 p-0">
+            <div class="h-15 bg-secondary">
+              <nav class="navbar navbar-expand-sm navbar-light">
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <button class="btn btn-primary" type="button" >ML Page
+                </button>
+                  
+                </div>
+              </nav>
+            </div>
+            <div class="h-85 image-fluid" id="mainImage" alt="logo" style="width: 100%;height:100%;">
+
+              
+              
+            </div>
+          </div>
+
+         <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="h-50 mt-1 p-0">
+
+              <div class="card">
+                <div class="card-header bg-primary">
+                  News
+                </div>
+                <div class="list-group">
+                  <a href="#" class="list-group-item list-group-item-action">Active item</a>
+                  <a href="#" class="list-group-item list-group-item-action">Item</a>
+                  <a href="#" class="list-group-item list-group-item-action">Item2</a>
+                  <a href="#" class="list-group-item list-group-item-action">Item</a>
+                  <a href="#" class="list-group-item list-group-item-action">Item</a>
+                  <a href="#" class="list-group-item list-group-item-action">Item2</a>
+                  <a href="#" class="list-group-item list-group-item-action">Item2</a>
+                  <a href="#" class="list-group-item list-group-item-action">
+                    <button class="btn btn-outline-light text-dark btn-block btn-sm">More...</button>
+                  </a>
+                </div>
+              </div>
+
+
+
+            </div>
+            <div class="h-50" >
+
+              <div class="card">
+                <div class="card-header bg-primary">
+                  <span>Canlendar</span>
+                 
+                
+                </div>
+                <div class="list-group">
+                  <a href="#" class="list-group-item list-group-item-action">Active item</a>
+                  <a href="#" class="list-group-item list-group-item-action">Item</a>
+                  <a href="#" class="list-group-item list-group-item-action">Item2</a>
+                  <a href="#" class="list-group-item list-group-item-action">Item</a>
+                  <a href="#" class="list-group-item list-group-item-action">Item</a>
+                  <a href="#" class="list-group-item list-group-item-action">Item2</a>
+                  <a href="#" class="list-group-item list-group-item-action">Item2</a>
+                  <a href="#" class="list-group-item list-group-item-action">
+                    <button class="btn btn-outline-light text-dark btn-block btn-sm">More...</button>
+                  </a>
+                </div>
+              </div>
+            </div>          
+         </div>
+      </div>
+     </div>
+
+      <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('mainImage'));
+        var option = {
+                      title: {
+                          text: 'Echarts'
+                      },
+                      tooltip: {},
+                      legend: {
+                      },
+                      xAxis: {
+                        data: {{ timestamp|safe }}                     
+                      },
+                      yAxis: {
+                        type: 'value',
+                        min: function(value) {return value.min;},
+                        max: function(value) {return value.max;}
+                      },
+                      dataZoom: [
+                                    {   // 这个dataZoom组件，默认控制x轴。
+                                        type: 'slider', // 这个 dataZoom 组件是 slider 型 dataZoom 组件
+                                        start: 0,      // 左边在 10% 的位置。
+                                        end: 100         // 右边在 60% 的位置。
+                                    },
+                                    {   // 这个dataZoom组件，也控制x轴。
+                                        type: 'inside', // 这个 dataZoom 组件是 inside 型 dataZoom 组件
+                                        start: 0,      // 左边在 10% 的位置。
+                                        end: 100         // 右边在 60% 的位置。
+                                    }
+                                ],
+                      series: [ {
+                                  name: 'open',
+                                  type: 'line',
+                                  data: {{ Open|safe }} 
+                                },
+                                {
+                                  name: 'high',
+                                  type: 'line',
+                                  data: {{ High|safe }}
+                                },
+                                {
+                                  name: 'low',
+                                  type: 'line',
+                                  data: {{ Low|safe }}
+                                },
+                                {
+                                  name: 'close',
+                                  type: 'line',
+                                  data: {{ Close|safe }} 
+                                }
+                      ]
+                    };
+      
+        myChart.setOption(option);
+      </script>
+
+
+
+
+
+
+
+
+
+    </body>
+</html>

@@ -11,11 +11,8 @@ def readFronSqllite(db_path,exectCmd):
 
 def index(request):
     context = {}
-
     selectNews="select articleTitle,articletime,articlecontent from fxNews"
-
     News = readFronSqllite("../static/data/FXdata.db",selectNews)
-
     context['news']=News[-10:]
 
     return render(request,'NewsPage.html',context)

@@ -30,8 +30,8 @@ def loadForexData(request):
     Calendars = readFronSqllite("../static/data/FXdata.db",selectCalendar)
     News = readFronSqllite("../static/data/FXdata.db",selectNews)
 
-    context['canlendars']=Calendars[:5]
-    context['news']=News[-5:]
+    context['canlendars']=Calendars[-30:]
+    context['news']=News[-30:]
 
     return render(request,'Home.html', context)
 

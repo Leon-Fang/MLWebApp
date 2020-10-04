@@ -21,4 +21,5 @@ urlpatterns = [
     path('',include('home.urls')),
     path('news/',include('news.urls')),
     path('analysis/',include('main.urls')),
+    path('calendars/',include('calendarPage.urls'))
 ]

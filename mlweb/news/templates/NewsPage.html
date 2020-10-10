@@ -13,7 +13,7 @@
     <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="../static/js/myscripts.js"></script>
+    
   </head>
   <body>
 
@@ -41,13 +41,15 @@
             </li>
         </ul>
       </nav>
-    
+      
+
       <div class="container-fluid">
        
           <div class="list-group">
             {% for new in news %}
-              <a href="#" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#modelId" onclick=setNewsModal({{new.0}},{{new.2}})>
-                <h4>{{new.0}}</h4>
+              <a href="#" class="list-group-item list-group-item-action" data-toggle="modal" data-target="#modelId">
+                <h4>{{new.0}}</h4> 
+                <div id="newsContents" hidden>{{new.2}}</div>           
                 <p>{{new.2|slice:":30"}}...</p>
               </a>
             {% endfor %}
@@ -78,7 +80,7 @@
 
           <div class="container">
             <nav aria-label="Page navigation">
-              <ul class="pagination pagination-lg justify-content-center">
+              <ul class="pagination pagination-lg justify-content-center" id="paginationId">
                 <li class="page-item disabled">
                   <a class="page-link" href="#" aria-label="Previous">
                     <span aria-hidden="true">&laquo;</span>
@@ -88,7 +90,7 @@
                 <li class="page-item active"><a class="page-link" href="#">1</a></li>
                 <li class="page-item"><a class="page-link" href="#">2</a></li>
                 <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link lastPage" href="#">{{newsCount}}</a></li>
                 <li class="page-item">
                   <a class="page-link" href="#" aria-label="Next">
                     <span aria-hidden="true">&raquo;</span>
@@ -105,6 +107,6 @@
 
 
 
-
+    <script src="../static/js/myscripts.js"></script>
     </body>
 </html>

@@ -13,7 +13,8 @@ def index(request):
     context = {}
     selectNews="select articleTitle,articletime,articlecontent from fxNews"
     News = readFronSqllite("../static/data/FXdata.db",selectNews)
-    context['news']=News[-10:]
+    context['newsCount']=News.__len__
+    context['news']=News[-10:]   #-10*i:10(1-i) pagination
 
     return render(request,'NewsPage.html',context)
 

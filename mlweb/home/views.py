@@ -13,7 +13,7 @@ def readFronSqllite(db_path,exectCmd):
 
 
 def loadForexData(request):
-    df = pd.read_csv("../static/data/GBPUSD_M15.csv",sep='\t')
+    df = pd.read_csv("./data/GBPUSD_M15.csv",sep='\t')
 
     context = {}
     context['cols'] = df.columns.tolist()
@@ -27,8 +27,8 @@ def loadForexData(request):
     selectCalendar="select publishDate,publishTime,Country,Event,ReportPeriod,PublishData,PredictedData,PreValue,Importance,tendency from ecocalendar"
     selectNews="select articleTitle,articletime,articlecontent from fxNews"
 
-    Calendars = readFronSqllite("../static/data/FXdata.db",selectCalendar)
-    News = readFronSqllite("../static/data/FXdata.db",selectNews)
+    Calendars = readFronSqllite("./data/FXdata.db",selectCalendar)
+    News = readFronSqllite("./data/FXdata.db",selectNews)
 
     context['canlendars']=Calendars[-30:]
     context['news']=News[-30:]

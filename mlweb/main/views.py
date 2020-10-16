@@ -2,7 +2,7 @@ from django.shortcuts import render,HttpResponse
 import pandas as pd
 
 def index(request):
-    df = pd.read_csv("../static/data/GBPUSD_M15.csv",sep='\t')
+    df = pd.read_csv("./data/GBPUSD_M15.csv",sep='\t')
     context = {}
     context['cols'] = df.columns.tolist()
     context['timestamp'] = df['Time'][:200].values.tolist()
